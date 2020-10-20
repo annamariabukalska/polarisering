@@ -24,6 +24,9 @@ header h1
 	text-align: center
 	margin-left: 90px
 	
+
+//Seksjoner
+
 section
 	width: $sectionwidth
 	height: $sectionheight
@@ -32,16 +35,6 @@ section
 	scroll-snap-align: center
 
 .sec1 
-	text-align: center
-
-.centered-alignment
-	align-self: center
-
-.bottom-alignment
-	align-self: self-end
-
-.title2
-	color: $elementcolor1
 
 .section-set1
 	color: $elementcolor1
@@ -67,29 +60,22 @@ section
 	justify-content: end
 	color: $elementcolor1
 
-
-.sec10 img
-//	text-decoration: underline
-	width: 500px
-	z-index: 50
-
 .sec7 
 	justify-content: end
 	color: $background
 
-.sec11
-	text-align: end
-
 .sec12
 	color: $elementcolor1
+	place-items: center
+	grid-template-columns: auto
 
-.instagram
-	text-align: center
+.centered-alignment
+	align-self: center
 
-a
-	font-size: $font-size * 3
-	color: $elementcolor1
-	text-decoration: none
+.bottom-alignment
+	align-self: self-end
+
+// Tekst
 
 h1
 	color: $elementcolor1
@@ -99,38 +85,80 @@ h1
 h2 
 	color: $elementcolor2
 	font-size: $font-size * 2.5
-	
+
 p 
 	font-size: $font-size * 2
- 
-	
+
+a
+	font-size: $font-size * 3
+	color: $elementcolor1
+	text-decoration: none
+	position: relative
+	left: 8vw
+	top: 43vh
+	z-index: 100
+
+
+.title2 
+	color: $elementcolor2
+
+.godfisk
+	text-align: center
+	position: relative
+	left: 46vw
+	bottom: 23vh
+	z-index: 100
+
 span
 	color: $elementcolor2
+
+//Sosiale medier-symboler
 
 .instagram 
 	transition: 0.2s all
 	cursor: pointer
-
-.instagram:hover, .facebook:hover
-	transform: scale(1.2)
-	
 
 .facebook
 	transition: 0.2s all
 	text-align: center
 	cursor: pointer
 
-.fish-container 
-	cursor: pointer
-	transition: 0.2s all
-	width: 100%
-	display: grid
-
-.fish-container:hover
+.instagram:hover, .facebook:hover
 	transform: scale(1.2)
 	
 
-input[type=checkbox]:checked 
-    outline: none
-	border-radius: 80%
+// Fisker
+
+.fish-container 
+	cursor: pointer
+	display: grid
+	grid-auto-flow: center
+
+.red-fish
+	position: relative
+	width: 80vw
+	transition: 0.2s all
+
+.blue-fish 
+	width: 40vw
+	position: relative
+	left: 40vw
+	z-index: 10
+	transition: 0.2s all
+
+.red-fish:hover, .blue-fish:hover
+	transform: scale(1.2)
+
+
+
+	
+.footer 
+height: 30vh
+display: grid
+grid-template-columns: 1fr 1fr 1fr
+text-align: center
+align-items: center
+padding: 2rem
+
+
 
