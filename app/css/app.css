@@ -51,24 +51,9 @@ section {
   padding: 110px;
   scroll-snap-align: center; }
 
-.section-set1 {
-  color: #39BCBB;
-  width: 500px; }
-
-.section-set2 {
-  width: 500px; }
-
-.section-set3 {
-  color: #39BCBB;
-  width: 500px; }
-
-.section-set4 {
-  width: 500px; }
-
-.section-set5 {
-  text-align: center;
-  width: 100%;
-  color: #39BCBB; }
+.sec1 {
+  text-align: left;
+  place-content: center left; }
 
 .sec3 {
   justify-content: end;
@@ -81,13 +66,19 @@ section {
 .sec12 {
   color: #39BCBB;
   place-items: center;
-  grid-template-columns: auto; }
+  grid-template-columns: auto;
+  text-align: left; }
 
 .centered-alignment {
   align-self: center; }
 
 .bottom-alignment {
   align-self: self-end; }
+
+.rules {
+  display: grid;
+  grid-template-columns: auto	auto;
+  gap: 2em; }
 
 h1 {
   color: #39BCBB;
@@ -100,15 +91,17 @@ h2 {
 
 p {
   font-size: 2em;
- }
+  color: #39BCBB;
+  width: 500px; }
 
 a {
   font-size: 3em;
   color: #39BCBB;
   text-decoration: none;
+  width: 40vw;
   position: relative;
-  left: 8vw;
-  top: 43vh;
+  left: 31vw;
+  top: 50vh;
   z-index: 100; }
 
 .title2 {
@@ -117,10 +110,33 @@ a {
 .godfisk {
   position: relative;
   left: 46vw;
-  bottom: 23vh;
+  bottom: 25vh;
   z-index: 100; }
 
+.section-set4, .section-set2 {
+  color: #17171F; }
+
+.section-set5 {
+  text-align: center;
+  width: 100%;
+  color: #39BCBB; }
+
+.sec12 p {
+  width: 80vw; }
+
 span {
+  color: #A82225; }
+
+.lesom {
+  color: #17171F; }
+
+.letter {
+  color: #39BCBB; }
+
+.letter2 {
+  color: #17171F; }
+
+#men {
   color: #A82225; }
 
 .instagram {
@@ -138,19 +154,18 @@ span {
 .fish-container {
   cursor: pointer;
   display: grid;
-  grid-auto-flow: center; }
+  grid-auto-flow: center;
+  transition: 0.2s all; }
+
+.fish-container:hover {
+  transform: scale(1.1); }
 
 .red-fish {
   position: relative;
-  width: 80vw;
-  transition: 0.2s all; }
+  width: 80vw; }
 
 .blue-fish {
-  width: 40vw;
+  width: 45vw;
   position: relative;
   left: 40vw;
-  z-index: 10;
-  transition: 0.2s all; }
-
-.red-fish:hover, .blue-fish:hover {
-  transform: scale(1.2); }
+  z-index: 10; }
