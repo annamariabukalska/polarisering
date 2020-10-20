@@ -59,6 +59,17 @@ section {
   justify-content: end;
   color: #39BCBB; }
 
+.section-set4, .section-set2 {
+  color: #17171F; }
+
+.section-set5 {
+  text-align: center;
+  width: 100%;
+  color: #39BCBB; }
+
+.sec12 p {
+  width: 80vw; }
+
 .sec7 {
   justify-content: end;
   color: #17171F; }
@@ -78,7 +89,8 @@ section {
 .rules {
   display: grid;
   grid-template-columns: auto	auto;
-  gap: 2em; }
+  gap: 2em;
+  grid-template: none; }
 
 h1 {
   color: #39BCBB;
@@ -113,17 +125,6 @@ a {
   bottom: 25vh;
   z-index: 100; }
 
-.section-set4, .section-set2 {
-  color: #17171F; }
-
-.section-set5 {
-  text-align: center;
-  width: 100%;
-  color: #39BCBB; }
-
-.sec12 p {
-  width: 80vw; }
-
 span {
   color: #A82225; }
 
@@ -136,15 +137,13 @@ span {
 .letter2 {
   color: #17171F; }
 
-#men {
+.men {
   color: #A82225; }
 
 .instagram {
-  transition: 0.2s all;
   cursor: pointer; }
 
 .facebook {
-  transition: 0.2s all;
   text-align: center;
   cursor: pointer; }
 
@@ -152,20 +151,58 @@ span {
   transform: scale(1.2); }
 
 .fish-container {
-  cursor: pointer;
-  display: grid;
-  grid-auto-flow: center;
-  transition: 0.2s all; }
+  background-image: url("/img/red-fish.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 100%;
+  align-items: center;
+  transition: 0.2s all;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
 .fish-container:hover {
   transform: scale(1.1); }
 
 .red-fish {
-  position: relative;
-  width: 80vw; }
+  width: 80vw;
+  margin: 0 auto;
+  position: relative; }
 
 .blue-fish {
   width: 45vw;
   position: relative;
   left: 40vw;
   z-index: 10; }
+
+input[type="checkbox"]:checked {
+  outline: none;
+    outline-border: none;
+    outline-background-color: #39BCBB;
+    outline-border-radius: 50%; }
+
+.external-link-button {
+  padding: 12px 20px;
+  background: #38bbbb;
+  color: white;
+  border-radius: 12px;
+  width: 100px;
+  margin-top: 16px;
+  cursor: pointer; }
+
+.sec13 {
+  display: grid;
+  text-align: center;
+  align-items: center;
+  padding: 2rem;
+  align-items: flex-end; }
+  .sec13 .video {
+    margin: 0 auto; }
+  .sec13 .footer {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px; }
+
+.pretty {
+  font-size: 18pt; }

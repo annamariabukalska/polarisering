@@ -1,12 +1,20 @@
-function addAnimation() {
+function openLink() {
+  window.open("http://criticalthinking.rethinkproject.eu/", '_blank');
+}
+
+function openFacebook() {
+  window.open("https://facebook.com/")
+}
+
+function addAnimation(selectorId) {
   
-  let title1 = document.querySelector('.title2');
+  let title1 = document.querySelector(selectorId);
    
   title1.innerHTML = title1.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
    
   anime.timeline({loop: true})
       .add({
-        targets: '.title2 .letter',
+        targets: selectorId + ' .letter',
         opacity: [0,1],
         easing: "easeInOutQuad",
         duration: 40,
@@ -14,7 +22,7 @@ function addAnimation() {
       });
   }
   
-  addAnimation()
+  addAnimation(".title2")
   
   
   function addAnimation2() {
@@ -151,15 +159,7 @@ function addAnimation() {
     }
           
     addAnimation6()
-        
-      
-    
-  
-  
-  
-  
-  
-  
+
   // const sec12 = document.querySelector("#1")
   // const sec12 = document.querySelector("#2")
   // const sec12 = document.querySelector("#3")
