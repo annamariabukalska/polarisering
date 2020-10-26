@@ -1,4 +1,4 @@
-html, *
+html
 	scroll-snap-type: Y mandatory
 	
 body	
@@ -6,11 +6,13 @@ body
 	background: url("../#{$img-path}/bakgrunn.png") no-repeat top center
 	background-color: #17171e
 	background-size: cover
-	display: grid
-	grid-template-columns: auto
 	overflow-x: hidden
 	font-family: $font
 	z-index: 10
+	+mobile
+		margin-top: 30px
+		// background: url("../#{$img-path}/bakgrunn-mobil.png") no-repeat top center
+
 
 header
 	max-width: $sectionwidth
@@ -18,6 +20,8 @@ header
 	display: grid
 	place-items: center
 	scroll-snap-align: center
+
+
 
 header h1 
 	transform: translateX(0) rotate(-45deg)
@@ -29,20 +33,43 @@ header h1
 section
 	width: $sectionwidth
 	height: $sectionheight
-	display: grid
+	display: flex
 	padding: $site-margin
 	scroll-snap-align: center
+	overflow-x: hidden
+	+mobile 
+		padding: $mobile-padding
+
 
 .sec1 
 	text-align: left
 	place-content: center left
+	
+.sec2
+	.section-set1
+		max-width: 60%
+		+mobile
+			max-width: 100%
 
 .sec3 
-	justify-content: end
 	color: $elementcolor1
+	text-align: right
+	+mobile 
+		padding-bottom: 40px
+	.section-set2
+		margin-left: 40%
+		color: $background
+		+mobile
+			margin-left: 0%
+		.letter2
+			+mobile
+				color: white
 
-.section-set4, .section-set2
+
+.section-set4
 	color: $background
+	+mobile
+
 
 .section-set5
 	text-align: center
@@ -66,7 +93,9 @@ section
 	align-self: center
 
 .bottom-alignment
-	align-self: self-end
+	// display: flex
+	align-self: flex-end
+	text-align: end
 
 // Div-er
 
@@ -90,7 +119,7 @@ h2
 p 
 	font-size: $font-size * 2
 	color: $elementcolor1
-	width: $paragraph-width
+	// width: 55%
  
 a
 	font-size: $font-size * 3
