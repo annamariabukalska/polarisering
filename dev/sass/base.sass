@@ -1,4 +1,4 @@
-html, *
+html
 	scroll-snap-type: Y mandatory
 	
 body	
@@ -6,11 +6,13 @@ body
 	background: url("../#{$img-path}/bakgrunn.png") no-repeat top center
 	background-color: #17171e
 	background-size: cover
-	display: grid
-	grid-template-columns: auto
 	overflow-x: hidden
 	font-family: $font
 	z-index: 10
+	+mobile
+		margin-top: 30px
+		// background: url("../#{$img-path}/bakgrunn-mobil.png") no-repeat top center
+
 
 	+mobile
 		background: url("../#{$img-path}/bakgrunn-mobil.png") no-repeat top center
@@ -22,6 +24,8 @@ header
 	place-items: center
 	scroll-snap-align: center
 
+
+
 header h1 
 	transform: translateX(0) rotate(-45deg)
 	text-align: center
@@ -32,44 +36,82 @@ header h1
 section
 	width: $sectionwidth
 	height: $sectionheight
-	display: grid
+	display: flex
 	padding: $site-margin
 	scroll-snap-align: center
+	overflow-x: hidden
+	+mobile 
+		padding: $mobile-padding
+
 
 .sec1 
 	text-align: left
 	place-content: center left
+	
+.sec2
+	.section-set1
+		max-width: 60%
+		+mobile
+			max-width: 100%
 
 .sec3 
-	justify-content: end
 	color: $elementcolor1
+	text-align: right
+	+mobile 
+		padding-bottom: 40px
+	.section-set2
+		margin-left: 40%
+		color: $background
+		+mobile
+			margin-left: 0%
+		.letter2
+			+mobile
+				color: white
 
-.section-set4, .section-set2
+
+.section-set4
 	color: $background
+	+mobile
+
 
 .section-set5
 	text-align: center
 	width: 100%
 	color: $elementcolor1
 
-.sec12 p
-	width: 80vw
-
 .sec7 
 	justify-content: end
 	color: $background
 
+.sec10 
+	.title-rethinking-movement
+		text-align: center
+	
 .sec12
 	color: $elementcolor1
 	place-items: center
-	grid-template-columns: auto
+	// grid-template-columns: auto
 	text-align: left
+	.pretty
+		white-space: normal
+		.state label:before
+			top: 0
+		.state label
+			text-indent: 2em
+			line-height: 1.25
+
+.sec12 p
+	// width: 80vw
+
 
 .centered-alignment
 	align-self: center
 
+
 .bottom-alignment
-	align-self: self-end
+	// display: flex
+	align-self: flex-end
+	text-align: end
 
 // Div-er
 
@@ -78,6 +120,9 @@ section
 	grid-template-columns: auto	auto 
 	gap: $padding * 2
 	grid-template: none
+	+mobile
+	overflow: hidden
+	
 
 // Tekst
 
@@ -93,7 +138,9 @@ h2
 p 
 	font-size: $font-size * 2
 	color: $elementcolor1
-	width: $paragraph-width
+	// width: 55%
+
+
  
 a
 	font-size: $font-size * 3
@@ -113,6 +160,8 @@ a
 	left: 46vw
 	bottom: 25vh
 	z-index: 100
+	+mobile
+	left: 12vw
 
 span
 	color: $elementcolor2
@@ -158,6 +207,7 @@ span
 	display: flex 
 	flex-direction: column
 	justify-content: center
+
 	
 .fish-container:hover
 	transform: scale(1.1)
@@ -172,6 +222,9 @@ span
 	position: relative
 	left: 40vw
 	z-index: 10
+	+mobile
+	width: 12vw
+	align-
 
 input[type="checkbox"]:checked
 	outline: none
