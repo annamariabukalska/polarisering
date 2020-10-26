@@ -11,7 +11,9 @@ function openLink() {
   }
   
   function addAnimation(selectorId) {
-	let title1 = document.querySelector(selectorId);
+	
+	let title1 = document.querySelector('.title2');
+	 
 	title1.innerHTML = title1.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 	 
 	anime.timeline({loop: true})
