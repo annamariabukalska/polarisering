@@ -14,6 +14,7 @@ body
 		background: url("../#{$img-path}/bakgrunn-mobil.png") no-repeat top center
 
 
+
 	+mobile
 		background: url("../#{$img-path}/bakgrunn-mobil.png") no-repeat top center
 
@@ -42,6 +43,7 @@ section
 	overflow-x: hidden
 	+mobile 
 		padding: $mobile-padding
+		scroll-snap-align: none
 
 
 .sec1 
@@ -241,10 +243,11 @@ input[type="checkbox"]:checked
 	margin-top: 16px
 	cursor: pointer
 
-.sec13 
-	.video 
+
+.video 
 		margin: 0 auto
-	.footer
+
+.footer
 		width: 100%
 		margin-top: 30px
 		margin-bottom: 30px
