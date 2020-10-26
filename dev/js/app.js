@@ -13,13 +13,22 @@ function openLink() {
 	title1.innerHTML = title1.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 	 
 	anime.timeline({loop: true})
-		.add({
-		  targets: selectorId + ' .letter',
-		  opacity: [0,1],
-		  easing: "easeInOutQuad",
-		  duration: 40,
-		  delay: (el, i) => 150 * (i+1)
-		});
+	  .add({
+		targets: '.title1 .letter',
+		translateY: [100,0],
+		translateZ: 0,
+		opacity: [0,1],
+		easing: "easeOutExpo",
+		duration: 1400,
+		delay: (el, i) => 300 + 30 * i
+	  }).add({
+		targets: '.title1 .letter',
+		translateY: [0,-100],
+		opacity: [1,0],
+		easing: "easeInExpo",
+		duration: 1200,
+		delay: (el, i) => 100 + 30 * i
+	  });
 	}
 	
 	addAnimation(".title2")
