@@ -193,18 +193,19 @@ input[type="checkbox"]:checked {
   margin-top: 16px;
   cursor: pointer; }
 
-.sec13 {
+.sec13 .video {
+  margin: 0 auto; }
+
+.sec13 .footer {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
   display: grid;
   text-align: center;
   align-items: center;
   padding: 2rem;
-  align-items: flex-end; }
-  .sec13 .video {
-    margin: 0 auto; }
-  .sec13 .footer {
-    width: 100%;
-    margin-top: 30px;
-    margin-bottom: 30px; }
+  align-items: flex-end;
+  font-size: 1em; }
 
 .pretty {
   font-size: 18pt; }
