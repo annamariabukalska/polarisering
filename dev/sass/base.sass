@@ -1,4 +1,4 @@
-html, *
+html
 	scroll-snap-type: Y mandatory
 	
 body	
@@ -34,7 +34,6 @@ section
 	overflow-x: hidden
 	+mobile 
 		padding: $mobile-padding
-		scroll-snap-align: none
 
 
 .sec1 
@@ -50,26 +49,23 @@ section
 .sec3 
 	color: $elementcolor1
 	text-align: right
-		+mobile 
-			padding-bottom: 40px
-
-.section-set2
-	margin-left: 40%
-	color: $background
+	+mobile 
+		padding-bottom: 40px
+	.section-set2
+		margin-left: 40%
+		color: $background
 		+mobile
 			margin-left: 0%
-	
-.letter2
-	+mobile
-		color: white
+		.letter2
+			+mobile
+				color: white
 
-.section-set3
-	+mobile
-		color: $background
 
 .section-set4
 	color: $background
-	
+	+mobile
+
+
 .section-set5
 	text-align: center
 	width: 100%
@@ -128,57 +124,41 @@ section
 .centered-alignment
 	align-self: center
 
+
 .bottom-alignment
+	// display: flex
 	align-self: flex-end
 	text-align: end
 
 // Div-er
-
-.fish-container 
-	background-image: url("../img/red-fish.png")
-	background-repeat: no-repeat
-	background-size: contain
-	background-position: center
-	height: 100%
-	align-items: center
-	transition: 0.2s all
-	display: flex 
-	flex-direction: column
-	justify-content: center
-
-.fish-container:hover
-	transform: scale(1.1)
 
 .rules 
 	display: grid
 	grid-template-columns: auto	auto 
 	gap: $padding * 2
 	grid-template: none
-	
 	+mobile
-		overflow: hidden
+	overflow: hidden
+	
 
 // Tekst
 
 h1
 	color: $elementcolor1
-	font-size: $font-size * 3.5
+	font-size: $font-size * 4
 	position: relative
-	transform: translateX(0) rotate(-45deg)
-	text-align: center
-	margin-left: 90px
 
 h2 
 	color: $elementcolor2
 	font-size: $font-size * 2.5
-	padding-bottom: $line-height * 2
 
 p 
 	font-size: $font-size * 2
 	color: $elementcolor1
-	line-height: $line-height
-	width: $paragraph-width
+	// width: 55%
 
+
+ 
 a
 	font-size: $font-size * 3
 	color: $elementcolor1
@@ -188,7 +168,6 @@ a
 	left: 31vw
 	top: 50vh
 	z-index: 100
-	line-height: $line-height
 
 .title2 
 	color: $elementcolor1
@@ -198,6 +177,9 @@ a
 	+mobile
 		font-size: 2.0em
 		width: 100vw
+
+span
+	color: $elementcolor2
 
 .lesom
 	color: $background 
@@ -252,15 +234,15 @@ input[type="checkbox"]:checked
 
 .external-link-button 
 	padding: 12px 20px
-	background: $elementcolor1
-	color: $background
+	background: #38bbbb
+	color: white
 	border-radius: 12px
 	width: 100px
-	margin-top: 1em 
+	margin-top: 16px
 	cursor: pointer
 
-
-.video 
+.sec13 
+	.video 
 		margin: 0 auto
 		border-radius: 8px
 	#footer
