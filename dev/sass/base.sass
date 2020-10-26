@@ -2,29 +2,21 @@ html
 	scroll-snap-type: Y mandatory
 	
 body	
-	max-width: $sectionwidth	
+	width: $sectionwidth	
 	background: url("../#{$img-path}/bakgrunn.png") no-repeat top center
 	background-color: #17171e
 	background-size: cover
 	overflow-x: hidden
 	font-family: $font
-	z-index: 10
 	+mobile
 		margin-top: 30px
-		// background: url("../#{$img-path}/bakgrunn-mobil.png") no-repeat top center
-
-
-	+mobile
-		background: url("../#{$img-path}/bakgrunn-mobil.png") no-repeat top center
 
 header
-	max-width: $sectionwidth
+	width: $sectionwidth
 	height: $sectionheight
 	display: grid
 	place-items: center
 	scroll-snap-align: center
-
-
 
 header h1 
 	transform: translateX(0) rotate(-45deg)
@@ -79,13 +71,35 @@ section
 	width: 100%
 	color: $elementcolor1
 
+.sec6
+	.section-set3
+		+desktop
+			max-width: 60%
+
 .sec7 
 	justify-content: end
 	color: $background
+	.section-set-4
+		align-self: flex-end
+		p
+			color: $background
+			text-align: right
+			margin-left: 50%
+			+mobile
+				margin-left: 0%
+				margin-bottom: 32px
+
+.sec9
+	.centered-alignment
+		width: 100%
 
 .sec10 
 	.title-rethinking-movement
 		text-align: center
+
+.sec11
+	.bottom-alignment
+		align-self: center
 	
 .sec12
 	color: $elementcolor1
@@ -96,13 +110,16 @@ section
 		white-space: normal
 		.state label:before
 			top: 0
+		.state.p-success label:after
+			top: 0
+
 		.state label
 			text-indent: 2em
 			line-height: 1.25
 
-.sec12 p
-	// width: 80vw
-
+.sec13
+	.section-set-6
+		width: 100%
 
 .centered-alignment
 	align-self: center
@@ -156,12 +173,10 @@ a
 	color: $elementcolor1
 
 .godfisk
-	position: relative
-	left: 46vw
-	bottom: 25vh
-	z-index: 100
+	text-align: center
 	+mobile
-	left: 12vw
+		font-size: 2.0em
+		width: 100vw
 
 span
 	color: $elementcolor2
@@ -177,38 +192,27 @@ span
 
 .men
 	color: $elementcolor2
-
-// Sosiale medier-symboler
-
-.instagram 
-	//transition: 0.2s all
-	cursor: pointer
-	width: 30px
-
-.facebook
-	//transition: 0.2s all
-	text-align: center
-	cursor: pointer
-	width: 15px
-
-.instagram:hover, .facebook:hover
-	transform: scale(1.2)
 	
 // Fisker
 
 .fish-container 
-	background-image: url("../img/red-fish.png")
 	background-repeat: no-repeat
 	background-size: contain
 	background-position: center
 	height: 100%
+	width: 100%
 	align-items: center
 	transition: 0.2s all
 	display: flex 
 	flex-direction: column
 	justify-content: center
 
+.red-fish-background
+	background-image: url("../img/red-fish.png")
 	
+.blue-fish-background
+	background-image: url("../img/blue-fish.png")
+
 .fish-container:hover
 	transform: scale(1.1)
 	
@@ -218,13 +222,9 @@ span
 	position: relative
 
 .blue-fish 
-	width: 45vw
+	width: 80vw
+	margin: 0 auto
 	position: relative
-	left: 40vw
-	z-index: 10
-	+mobile
-	width: 12vw
-	align-
 
 input[type="checkbox"]:checked
 	outline: none
@@ -244,16 +244,26 @@ input[type="checkbox"]:checked
 .sec13 
 	.video 
 		margin: 0 auto
-	.footer
+		border-radius: 8px
+	#footer
 		width: 100%
 		margin-top: 30px
 		margin-bottom: 30px
-		display: grid
 		text-align: center
 		align-items: center
 		padding: 2rem
 		align-items: flex-end
-		font-size: $font-size
+		font-size: $font-size	
+		.footer-title
+			margin-bottom: 32px
+
+		.social-media-icon 
+			transition: 0.2s all
+			cursor: pointer
+			width: 38px
+		.social-media-icon:hover
+			transform: scale(1.2)
+			
 
 .pretty
 	font-size: 18pt

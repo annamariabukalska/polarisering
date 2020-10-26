@@ -3,18 +3,20 @@ function openLink() {
   }
   
   function openFacebook() {
-	window.open("https://facebook.com/")
+	window.open("https://facebook.com/ikketaaltforgodfisk")
+  }
+
+  function openInstagram() {
+	window.open("https://www.instagram.com/ikketaaltforgodfisk/")
   }
   
   function addAnimation(selectorId) {
-	
 	let title1 = document.querySelector(selectorId);
-	 
 	title1.innerHTML = title1.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 	 
 	anime.timeline({loop: true})
 	  .add({
-		targets: '.title1 .letter',
+		targets: '.title2 .letter',
 		translateY: [100,0],
 		translateZ: 0,
 		opacity: [0,1],
@@ -22,7 +24,7 @@ function openLink() {
 		duration: 1400,
 		delay: (el, i) => 300 + 30 * i
 	  }).add({
-		targets: '.title1 .letter',
+		targets: '.title2 .letter',
 		translateY: [0,-100],
 		opacity: [1,0],
 		easing: "easeInExpo",
@@ -31,10 +33,9 @@ function openLink() {
 	  });
 	}
 	
-	addAnimation(".title2")
-	
-	
-	function addAnimation2() {
+addAnimation(".title2")
+		
+function addAnimation2() {
 	  
 	let text1 = document.querySelector('.section-set1'); 
 	
