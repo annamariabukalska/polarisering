@@ -1,4 +1,4 @@
-html
+html, *
 	scroll-snap-type: Y mandatory
 	
 body	
@@ -9,14 +9,9 @@ body
 	overflow-x: hidden
 	font-family: $font
 	z-index: 10
-	+mobile
-		margin-top: 30px
-		background: url("../#{$img-path}/bakgrunn-mobil.png") no-repeat top center
-
-
-
-	+mobile
-		background: url("../#{$img-path}/bakgrunn-mobil.png") no-repeat top center
+		+mobile
+			margin-top: 30px
+			background: url("../#{$img-path}/bakgrunn-mobil.png") no-repeat top center
 
 header
 	max-width: $sectionwidth
@@ -25,12 +20,19 @@ header
 	place-items: center
 	scroll-snap-align: center
 
+		+mobile 
+			scroll-snap-align: none
 
-
-header h1 
-	transform: translateX(0) rotate(-45deg)
-	text-align: center
-	margin-left: 90px
+.footer
+		width: $sectionwidth
+		margin-top: 30px
+		margin-bottom: 30px
+		display: grid
+		text-align: center
+		align-items: center
+		padding: 2rem
+		align-items: flex-end
+		
 
 // Seksjoner
 
@@ -120,14 +122,29 @@ section
 
 // Div-er
 
+.fish-container 
+	background-image: url("../img/red-fish.png")
+	background-repeat: no-repeat
+	background-size: contain
+	background-position: center
+	height: 100%
+	align-items: center
+	transition: 0.2s all
+	display: flex 
+	flex-direction: column
+	justify-content: center
+
+.fish-container:hover
+	transform: scale(1.1)
+
 .rules 
 	display: grid
 	grid-template-columns: auto	auto 
 	gap: $padding * 2
 	grid-template: none
-	+mobile
-	overflow: hidden
 	
+	+mobile
+		overflow: hidden
 
 // Tekst
 
@@ -135,6 +152,9 @@ h1
 	color: $elementcolor1
 	font-size: $font-size * 3.5
 	position: relative
+	transform: translateX(0) rotate(-45deg)
+	text-align: center
+	margin-left: 90px
 
 h2 
 	color: $elementcolor2
@@ -169,8 +189,7 @@ a
 	+mobile
 	left: 12vw
 
-span
-	color: $elementcolor2
+
 
 .lesom
 	color: $background 
@@ -184,40 +203,22 @@ span
 .men
 	color: $elementcolor2
 
-// Sosiale medier-symboler
+footer p 
+	font-size: $font-size
 
-.instagram 
-	//transition: 0.2s all
-	cursor: pointer
-	width: 30px
+span
+	color: $elementcolor2
 
-.facebook
-	//transition: 0.2s all
-	text-align: center
-	cursor: pointer
-	width: 15px
 
-.instagram:hover, .facebook:hover
-	transform: scale(1.2)
-	
-// Fisker
 
-.fish-container 
-	background-image: url("../img/red-fish.png")
-	background-repeat: no-repeat
-	background-size: contain
-	background-position: center
-	height: 100%
-	align-items: center
-	transition: 0.2s all
-	display: flex 
-	flex-direction: column
-	justify-content: center
 
 	
-.fish-container:hover
-	transform: scale(1.1)
-	
+
+
+
+
+// Ikoner 
+
 .red-fish
 	width: 80vw
 	margin: 0 auto
@@ -231,6 +232,21 @@ span
 		+mobile
 		width: 12vw
 
+.instagram 
+	transition: 0.2s all
+	cursor: pointer
+	width: 30px
+
+.facebook
+	transition: 0.2s all
+	text-align: center
+	cursor: pointer
+	width: 15px
+
+.instagram:hover, .facebook:hover
+	transform: scale(1.2)
+
+// Input 
 
 input[type="checkbox"]:checked
 	outline: none
@@ -251,16 +267,7 @@ input[type="checkbox"]:checked
 .video 
 		margin: 0 auto
 
-.footer
-		width: 100%
-		margin-top: 30px
-		margin-bottom: 30px
-		display: grid
-		text-align: center
-		align-items: center
-		padding: 2rem
-		align-items: flex-end
-		font-size: $font-size
+
 
 .pretty
 	font-size: 18pt
