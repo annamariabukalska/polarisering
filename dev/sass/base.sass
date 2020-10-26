@@ -23,17 +23,6 @@ header
 		+mobile 
 			scroll-snap-align: none
 
-.footer
-		width: $sectionwidth
-		margin-top: 30px
-		margin-bottom: 30px
-		display: grid
-		text-align: center
-		align-items: center
-		padding: 2rem
-		align-items: flex-end
-		
-
 // Seksjoner
 
 section
@@ -61,16 +50,18 @@ section
 .sec3 
 	color: $elementcolor1
 	text-align: right
-	+mobile 
-		padding-bottom: 40px
-	.section-set2
-		margin-left: 40%
-		color: $background
+		+mobile 
+			padding-bottom: 40px
+
+.section-set2
+	margin-left: 40%
+	color: $background
 		+mobile
 			margin-left: 0%
-		.letter2
-			+mobile
-				color: white
+	
+.letter2
+	+mobile
+		color: white
 
 .section-set3
 	+mobile
@@ -78,9 +69,7 @@ section
 
 .section-set4
 	color: $background
-	+mobile
-
-
+	
 .section-set5
 	text-align: center
 	width: 100%
@@ -99,24 +88,21 @@ section
 	place-items: center
 	// grid-template-columns: auto
 	text-align: left
-	.pretty
-		white-space: normal
-		.state label:before
-			top: 0
-		.state label
-			text-indent: 2em
-			line-height: 1.25
 
-.sec12 p
-	// width: 80vw
+.pretty
+	white-space: normal
 
+.state label:before
+	top: 0
+
+.state label
+	text-indent: 2em
+	line-height: $line-height
 
 .centered-alignment
 	align-self: center
 
-
 .bottom-alignment
-	// display: flex
 	align-self: flex-end
 	text-align: end
 
@@ -189,8 +175,6 @@ a
 	+mobile
 	left: 12vw
 
-
-
 .lesom
 	color: $background 
 
@@ -203,19 +187,15 @@ a
 .men
 	color: $elementcolor2
 
-footer p 
-	font-size: $font-size
+.footer
+		width: $sectionwidth
+		position: relative
+		text-align: center
+		padding: $padding * 2
+		font-size: $font-size
 
 span
 	color: $elementcolor2
-
-
-
-
-	
-
-
-
 
 // Ikoner 
 
@@ -266,8 +246,6 @@ input[type="checkbox"]:checked
 
 .video 
 		margin: 0 auto
-
-
 
 .pretty
 	font-size: 18pt
