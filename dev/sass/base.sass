@@ -13,6 +13,7 @@ body
 		+mobile
 			margin-top: 30px
 			background: url("../#{$img-path}/bakgrunn-mobil.png") no-repeat top center
+			background-size: cover
 
 header
 	max-width: $sectionwidth
@@ -54,10 +55,6 @@ section
 	text-align: right
 		+mobile 
 			padding-bottom: 40px
-
-
-	
-
 
 .sec7 
 	justify-content: end
@@ -149,9 +146,8 @@ a
 	margin-left: 40%
 	color: $background
 		
-		+mobile
-			margin-left: 0%
-			color: $background
+	+mobile
+		margin-left: 0%
 
 .section-set3
 	+mobile
