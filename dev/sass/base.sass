@@ -1,39 +1,41 @@
-html
+html, *
 	scroll-snap-type: Y mandatory
 	
 body	
-	width: $sectionwidth	
+	max-width: $sectionwidth	
 	background: url("../#{$img-path}/bakgrunn.png") no-repeat top center
 	background-color: #17171e
 	background-size: cover
 	overflow-x: hidden
 	font-family: $font
-	+mobile
-		margin-top: 30px
+	z-index: 10
+		
+		+mobile
+			margin-top: 30px
+			background: url("../#{$img-path}/bakgrunn-mobil.png") no-repeat top center
 
 header
-	width: $sectionwidth
+	max-width: $sectionwidth
 	height: $sectionheight
 	display: grid
 	place-items: center
 	scroll-snap-align: center
 
-header h1 
-	transform: translateX(0) rotate(-45deg)
-	text-align: center
-	margin-left: 90px
+		+mobile 
+			scroll-snap-align: none
 
 // Seksjoner
 
 section
 	width: $sectionwidth
 	height: $sectionheight
-	display: flex
+	display: grid
 	padding: $site-margin
 	scroll-snap-align: center
 	overflow-x: hidden
 	+mobile 
 		padding: $mobile-padding
+		scroll-snap-align: none
 
 
 .sec1 
@@ -49,116 +51,98 @@ section
 .sec3 
 	color: $elementcolor1
 	text-align: right
-	+mobile 
-		padding-bottom: 40px
-	.section-set2
-		margin-left: 40%
-		color: $background
+		+mobile 
+			padding-bottom: 40px
+
+.section-set2
+	margin-left: 40%
+	color: $background
 		+mobile
 			margin-left: 0%
-		.letter2
-			+mobile
-				color: white
+	
+.letter2
+	+mobile
+		color: white
 
+.section-set3
+	+mobile
+		color: $background
 
 .section-set4
 	color: $background
-	+mobile
-
-
+	
 .section-set5
 	text-align: center
 	width: 100%
 	color: $elementcolor1
 
-.sec6
-	.section-set3
-		+desktop
-			max-width: 60%
-
 .sec7 
 	justify-content: end
 	color: $background
-	.section-set-4
-		align-self: flex-end
-		p
-			color: $background
-			text-align: right
-			margin-left: 50%
-			+mobile
-				margin-left: 0%
-				margin-bottom: 32px
-
-.sec9
-	.centered-alignment
-		width: 100%
 
 .sec10 
 	.title-rethinking-movement
 		text-align: center
-
-.sec11
-	.bottom-alignment
-		align-self: center
 	
 .sec12
 	color: $elementcolor1
 	place-items: center
-	// grid-template-columns: auto
+	grid-template-columns: auto
 	text-align: left
-	.pretty
-		white-space: normal
-		.state label:before
-			top: 0
-		.state.p-success label:after
-			top: 0
 
-		.state label
-			text-indent: 2em
-			line-height: 1.25
-
-.sec13
-	.section-set-6
-		width: 100%
+// Div-er
 
 .centered-alignment
 	align-self: center
 
-
 .bottom-alignment
-	// display: flex
 	align-self: flex-end
 	text-align: end
 
-// Div-er
+.fish-container 
+	display: grid
+	place-items: center
 
 .rules 
 	display: grid
 	grid-template-columns: auto	auto 
 	gap: $padding * 2
 	grid-template: none
-	+mobile
-	overflow: hidden
 	
+	+mobile
+		overflow: hidden
+
+.pretty
+	white-space: normal
+
+.state label
+	text-indent: 2em
+	line-height: $line-height
+
+.state label:before
+	top: 0
 
 // Tekst
 
 h1
 	color: $elementcolor1
-	font-size: $font-size * 4
+	font-size: $font-size * 3.5
 	position: relative
+	transform: translateX(0) rotate(-45deg)
+	text-align: center
+	margin-left: 90px
 
 h2 
 	color: $elementcolor2
 	font-size: $font-size * 2.5
+	padding-bottom: $line-height * 2
 
 p 
 	font-size: $font-size * 2
 	color: $elementcolor1
-	// width: 55%
+	line-height: $line-height
+	width: $paragraph-width
 
-
- 
 a
 	font-size: $font-size * 3
 	color: $elementcolor1
@@ -168,18 +152,19 @@ a
 	left: 31vw
 	top: 50vh
 	z-index: 100
+	line-height: $line-height
 
 .title2 
 	color: $elementcolor1
 
 .godfisk
-	text-align: center
+	position: relative
+	left: 46vw
+	bottom: 25vh
+	z-index: 100
+	
 	+mobile
-		font-size: 2.0em
-		width: 100vw
-
-span
-	color: $elementcolor2
+		left: 12vw
 
 .lesom
 	color: $background 
@@ -192,39 +177,56 @@ span
 
 .men
 	color: $elementcolor2
-	
-// Fisker
 
-.fish-container 
-	background-repeat: no-repeat
-	background-size: contain
-	background-position: center
-	height: 100%
-	width: 100%
-	align-items: center
-	transition: 0.2s all
-	display: flex 
-	flex-direction: column
-	justify-content: center
+.footer
+		width: $sectionwidth
+		position: relative
+		text-align: center
+		padding: $padding * 2
+		font-size: $font-size
 
-.red-fish-background
-	background-image: url("../img/red-fish.png")
-	
-.blue-fish-background
-	background-image: url("../img/blue-fish.png")
+span
+	color: $elementcolor2
 
-.fish-container:hover
-	transform: scale(1.1)
-	
+// Ikoner 
+
 .red-fish
-	width: 80vw
+	width: $paragraph-width * 2
 	margin: 0 auto
 	position: relative
+	transition: 0.2s all
+
+.red-fish:hover
+	transform: scale(1.1)
 
 .blue-fish 
-	width: 80vw
-	margin: 0 auto
+	width: $paragraph-width
 	position: relative
+	left: 40vw
+	z-index: 10
+	transition: 0.2s all
+	
+		+mobile
+		width: 12vw
+
+.blue-fish:hover
+	transform: scale(1.1)
+
+.instagram 
+	transition: 0.2s all
+	cursor: pointer
+	width: 30px
+
+.facebook
+	transition: 0.2s all
+	text-align: center
+	cursor: pointer
+	width: 15px
+
+.instagram:hover, .facebook:hover
+	transform: scale(1.2)
+
+// Input 
 
 input[type="checkbox"]:checked
 	outline: none
@@ -234,36 +236,16 @@ input[type="checkbox"]:checked
 
 .external-link-button 
 	padding: 12px 20px
-	background: #38bbbb
-	color: white
+	background: $elementcolor1
+	color: $background
 	border-radius: 12px
 	width: 100px
-	margin-top: 16px
+	margin-top: 1em 
 	cursor: pointer
 
-.sec13 
-	.video 
-		margin: 0 auto
-		border-radius: 8px
-	#footer
-		width: 100%
-		margin-top: 30px
-		margin-bottom: 30px
-		text-align: center
-		align-items: center
-		padding: 2rem
-		align-items: flex-end
-		font-size: $font-size	
-		.footer-title
-			margin-bottom: 32px
 
-		.social-media-icon 
-			transition: 0.2s all
-			cursor: pointer
-			width: 38px
-		.social-media-icon:hover
-			transform: scale(1.2)
-			
+.video 
+		margin: 0 auto
 
 .pretty
 	font-size: 18pt
