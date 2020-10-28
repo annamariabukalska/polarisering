@@ -33,8 +33,8 @@ section
 	padding: $site-margin
 	scroll-snap-align: center
 	overflow-x: hidden
+	
 	+mobile 
-		padding: $mobile-padding
 		scroll-snap-align: none
 
 
@@ -45,6 +45,7 @@ section
 .sec2
 	.section-set1
 		max-width: 60%
+		
 		+mobile
 			max-width: 100%
 
@@ -54,27 +55,9 @@ section
 		+mobile 
 			padding-bottom: 40px
 
-.section-set2
-	margin-left: 40%
-	color: $background
-		+mobile
-			margin-left: 0%
-	
-.letter2
-	+mobile
-		color: white
 
-.section-set3
-	+mobile
-		color: $background
-
-.section-set4
-	color: $background
 	
-.section-set5
-	text-align: center
-	width: 100%
-	color: $elementcolor1
+
 
 .sec7 
 	justify-content: end
@@ -143,6 +126,11 @@ p
 	line-height: $line-height
 	width: $paragraph-width
 
+	+mobile
+		font-size: $font-size
+		padding: $mobile-padding
+
+
 a
 	font-size: $font-size * 3
 	color: $elementcolor1
@@ -155,6 +143,26 @@ a
 	line-height: $line-height
 
 .title2 
+	color: $elementcolor1
+
+.section-set2
+	margin-left: 40%
+	color: $background
+		
+		+mobile
+			margin-left: 0%
+			color: $background
+
+.section-set3
+	+mobile
+		color: $background
+
+.section-set4
+	color: $background
+	
+.section-set5
+	text-align: center
+	width: 100%
 	color: $elementcolor1
 
 .godfisk
@@ -242,7 +250,6 @@ input[type="checkbox"]:checked
 	width: 100px
 	margin-top: 1em 
 	cursor: pointer
-
 
 .video 
 		margin: 0 auto

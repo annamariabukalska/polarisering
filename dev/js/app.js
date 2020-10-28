@@ -10,8 +10,8 @@ function openLink() {
 	window.open("https://www.instagram.com/ikketaaltforgodfisk/")
   }
   
-  function addAnimation(selectorId) {
-	let title1 = document.querySelector(selectorId);
+  function addAnimation() {
+	let title1 = document.querySelector('.title2');
 	title1.innerHTML = title1.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 	 
 	anime.timeline({loop: true})
