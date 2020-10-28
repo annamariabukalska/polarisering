@@ -1,0 +1,295 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; }
+  
+  h1, h2, h3, h4, h5 {
+    font-size: inherit;
+    font-weight: normal; }
+  
+  button {
+    font: inherit;
+    border: 0;
+    text-align: left; }
+  
+  @font-face {
+    font-family: "Josefin Sans";
+    src: url("../assets/JosefinSans-VariableFont_wght.ttf");
+    font-weight: normal;
+    font-style: regular; }
+  
+  *, html {
+    scroll-snap-type: Y mandatory; }
+  
+  body {
+    width: 100vw;
+    background: url("..//img/bakgrunn.png") no-repeat center top;
+    background-size: cover;
+    font-family: "Josefin Sans";
+    z-index: 10; }
+    @media screen and (max-width: 1024px) {
+      body {
+        background: url("..//img/bakgrunn-mobil.png") no-repeat center top;
+        background-size: contain; } }
+  
+  section {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    scroll-snap-align: center; }
+    @media screen and (max-width: 1024px) {
+      section {
+        scroll-snap-align: none; } }
+  
+  @media screen and (max-width: 1024px) {
+    .fish, .rules, .footer {
+      background-color: #17171F; } }
+  
+  .gap {
+    height: 200vh;
+    width: 100vw; }
+    @media screen and (max-width: 1024px) {
+      .gap {
+        height: 100vh; } }
+  
+  .gap-small, .gap-small-2 {
+    height: 100vh;
+    width: 100vw; }
+    @media screen and (max-width: 1024px) {
+      .gap-small, .gap-small-2 {
+        height: 33.33333vh; } }
+  
+  .gap-small-2 {
+    background-color: #17171F; }
+  
+  @media screen and (max-width: 1024px) {
+    .text {
+      height: 1vh; } }
+  
+  .intro-container {
+    position: relative;
+    bottom: -30vh;
+    right: 20.83333vw; }
+    @media screen and (max-width: 1024px) {
+      .intro-container {
+        bottom: 60vh;
+        right: 0.625vw; } }
+  
+  .fish-container {
+    height: 66.66667vh;
+    width: 100vw;
+    display: grid;
+    place-items: center; }
+  
+  .link {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 1em;
+    width: 35vw;
+    position: relative;
+    bottom: 35vh;
+    right: -6.25vw;
+    z-index: 100; }
+    @media screen and (max-width: 1024px) {
+      .link {
+        bottom: 253vh;
+        width: 17.5vw;
+        right: 7.14286vw; } }
+  
+  .rules-container {
+    display: grid;
+    gap: 2em;
+    position: relative; }
+    @media screen and (max-width: 1024px) {
+      .rules-container {
+        bottom: 270vh; } }
+  
+  .footer-container {
+    display: grid;
+    grid-template-columns: auto;
+    place-content: center;
+    position: relative; }
+    @media screen and (max-width: 1024px) {
+      .footer-container {
+        bottom: 200vh; } }
+  
+  .icons {
+    display: grid;
+    place-content: center;
+    grid-template-columns: auto auto auto;
+    gap: 1em; }
+  
+  h1 {
+    font-size: 3.5em;
+    transform: translateX(0) rotate(-45deg);
+    color: #39BCBB;
+    position: relative;
+    left: 4.16667vw; }
+    @media screen and (max-width: 1024px) {
+      h1 {
+        font-size: 2em;
+        width: 63vw;
+        bottom: 32vh; } }
+  
+  h2 {
+    font-size: 2.5em;
+    color: #A82225;
+    line-height: 1.2em; }
+    @media screen and (max-width: 1024px) {
+      h2 {
+        font-size: 1.5em; } }
+  
+  h3 {
+    font-size: 2em;
+    color: #39BCBB; }
+    @media screen and (max-width: 1024px) {
+      h3 {
+        font-size: 1em;
+        width: 70vw;
+        line-height: 1.2em; } }
+  
+  p {
+    font-size: 2em;
+    width: 35vw;
+    line-height: 1.2em;
+    color: #39BCBB;
+    text-align: left;
+    position: relative; }
+    @media screen and (max-width: 1024px) {
+      p {
+        font-size: 1em;
+        width: 70vw; } }
+  
+  a {
+    font-size: 2.5em;
+    text-decoration: none;
+    color: #17171F;
+    position: relative;
+    z-index: 100; }
+    @media screen and (max-width: 1024px) {
+      a {
+        font-size: 1.2em; } }
+  
+  .story-text-1, .story-text-3 {
+    right: 25vw;
+    bottom: 5vh; }
+    @media screen and (max-width: 1024px) {
+      .story-text-1, .story-text-3 {
+        bottom: 80vh;
+        right: 6.25vw; } }
+  
+  .story-text-2, .story-text-4 {
+    color: #17171F;
+    right: -25vw;
+    bottom: 5vh; }
+    @media screen and (max-width: 1024px) {
+      .story-text-2, .story-text-4 {
+        bottom: 100vh;
+        right: -6.25vw; } }
+  
+  @media screen and (max-width: 1024px) {
+    .story-text-1, .story-text-2 {
+      bottom: 60vh; } }
+  
+  @media screen and (max-width: 1024px) {
+    .story-text-3, .story-text-4 {
+      bottom: 110vh; } }
+  
+  .story-text-5 {
+    text-align: center;
+    bottom: 40vh; }
+    @media screen and (max-width: 1024px) {
+      .story-text-5 {
+        bottom: 160vh; } }
+  
+  .rethinking {
+    color: #39BCBB; }
+  
+  .hashtag {
+    bottom: 32vh;
+    right: 2.5vw;
+    font-size: 2em; }
+    @media screen and (max-width: 1024px) {
+      .hashtag {
+        bottom: 283vh;
+        font-size: 1em; } }
+  
+  .so-me {
+    color: #39BCBB;
+    font-size: 2em; }
+    @media screen and (max-width: 1024px) {
+      .so-me {
+        font-size: 1em; } }
+  
+  .footer-text {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 1em; }
+    @media screen and (max-width: 1024px) {
+      .footer-text {
+        font-size: 1em; } }
+  
+  span {
+    color: #A82225; }
+  
+  .letter {
+    color: #39BCBB; }
+  
+  .letter-dark {
+    color: #17171F; }
+  
+  .red {
+    z-index: 10;
+    width: 52.5vw;
+    transition: 0.2s all;
+    position: relative; }
+    @media screen and (max-width: 1024px) {
+      .red {
+        width: 70vw;
+        bottom: 220vh; } }
+  
+  .red:hover {
+    transform: scale(1.1); }
+  
+  .blue {
+    z-index: 10;
+    width: 35vw;
+    transition: 0.2s all;
+    position: relative; }
+    @media screen and (max-width: 1024px) {
+      .blue {
+        bottom: 250vh;
+        width: 52.5vw; } }
+  
+  .blue:hover {
+    transform: scale(1.1); }
+  
+  .arrow {
+    width: 30px; }
+    @media screen and (max-width: 1024px) {
+      .arrow {
+        width: 15px; } }
+  
+  .instagram {
+    width: 30px;
+    transition: 0.2s all; }
+  
+  .instagram:hover {
+    transform: scale(1.1); }
+  
+  .facebook {
+    width: 30px;
+    transition: 0.2s all; }
+  
+  .facebook:hover {
+    transform: scale(1.1); }
+  
+  .video {
+    border-radius: 2em;
+    position: relative; }
+    @media screen and (max-width: 1024px) {
+      .video {
+        bottom: 260vh;
+        width: 70vw;
+        height: 52.5vw; } }
