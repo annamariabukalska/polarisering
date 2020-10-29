@@ -38,10 +38,7 @@ section {
   display: grid;
   place-items: center;
   scroll-snap-align: center; }
-  @media screen and (max-width: 1024px) {
-    section {
-      scroll-snap-align: none; } }
-
+  
 @media screen and (max-width: 1024px) {
   .story-2 {
     background-color: #A82225; } }
@@ -131,7 +128,9 @@ section {
   position: relative; }
   @media screen and (max-width: 1024px) {
     .rules-container {
-      bottom: 80vh; } }
+      bottom: 80vh; 
+      width: 80vw;
+    } }
 
 .footer-container {
   display: grid;
