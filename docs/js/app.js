@@ -145,6 +145,4 @@ addAnimation3()
 		}
 					
 	addAnimation4()
-  
-
 	
