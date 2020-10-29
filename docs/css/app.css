@@ -244,13 +244,13 @@ a {
     .so-me {
       font-size: 1em; } }
 
-.footer-text {
+.footer-text, .emails {
   text-align: center;
   font-size: 1.5em;
   padding: 2em;
   width: 70vw; }
   @media screen and (max-width: 1024px) {
-    .footer-text {
+    .footer-text, .emails {
       font-size: 1em; } }
 
 span {
@@ -269,7 +269,7 @@ span {
   position: relative; }
   @media screen and (max-width: 1024px) {
     .red {
-      width: 70vw;
+      width: 80vw;
       bottom: none; } }
 
 .red:hover {
@@ -283,7 +283,7 @@ span {
   @media screen and (max-width: 1024px) {
     .blue {
       bottom: none;
-      width: 52.5vw; } }
+      width: 60vw; } }
 
 .blue:hover {
   transform: scale(1.1); }
