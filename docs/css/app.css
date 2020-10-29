@@ -62,7 +62,7 @@ section {
     z-index: 100; } }
 
 .code-gap {
-  height: 180vh;
+  height: 200vh;
   width: 100vw; }
   @media screen and (max-width: 1024px) {
     .code-gap {
