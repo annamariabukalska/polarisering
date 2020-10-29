@@ -147,9 +147,7 @@ section {
   place-content: center;
   grid-template-columns: auto auto auto;
   gap: 1em; 
-  padding-bottom: 5em;
-}
-   
+  padding-bottom: 5em; }
 
 h1 {
   font-size: 3.5em;
