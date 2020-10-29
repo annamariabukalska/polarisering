@@ -29,8 +29,8 @@ body {
   z-index: 10; }
   @media screen and (max-width: 1024px) {
     body {
-      background: url("..//img/bakgrunn-mobil.png") no-repeat center top;
-      background-size: contain; } }
+      background: url("..//img/mobil-bakgrunn.png") no-repeat center top;
+      background-size: cover; } }
 
 section {
   width: 100vw;
@@ -40,26 +40,53 @@ section {
   scroll-snap-align: center; }
   @media screen and (max-width: 1024px) {
     section {
-      scroll-snap-align: none;
-      height: 100vh; } }
+      scroll-snap-align: none; } }
 
 @media screen and (max-width: 1024px) {
-  .fish, .rules, .footer {
-    background-color: #17171F; } }
+  .story-2 {
+    background-color: #A82225; } }
 
-.gap {
+@media screen and (max-width: 1024px) {
+  .story-4 {
+    background-color: #39BCBB; } }
+
+.hand-gap, .mask-gap, .gap-small, .gap-small-2 {
+  height: 100vh;
+  width: 100vw; }
+
+@media screen and (max-width: 1024px) {
+  .hand-gap {
+    height: 40vh;
+    background: url("..//img/thumbs.png") no-repeat center top;
+    background-attachment: fixed;
+    z-index: 100; } }
+
+.code-gap {
   height: 200vh;
   width: 100vw; }
   @media screen and (max-width: 1024px) {
-    .gap {
-      height: 100vh; } }
+    .code-gap {
+      height: 40vh;
+      background: url("..//img/code-branch.png") no-repeat center top;
+      background-attachment: fixed;
+      z-index: 100; } }
 
-.gap-small, .gap-small-2 {
-  height: 100vh;
-  width: 100vw; }
+.hate-gap {
+  height: 0; }
   @media screen and (max-width: 1024px) {
-    .gap-small, .gap-small-2 {
-      height: 33.33333vh; } }
+    .hate-gap {
+      height: 40vh;
+      background: url("..//img/hate.png") no-repeat center top;
+      background-attachment: fixed;
+      z-index: 100; } }
+
+@media screen and (max-width: 1024px) {
+  .mask-gap {
+    height: 40vh;
+    background-color: #39BCBB;
+    background: url("..//img/mask.png") no-repeat center top;
+    background-attachment: fixed;
+    z-index: 100; } }
 
 .gap-small-2 {
   background-color: #17171F; }
@@ -74,7 +101,7 @@ section {
   right: 20.83333vw; }
   @media screen and (max-width: 1024px) {
     .intro-container {
-      bottom: 60vh;
+      bottom: none;
       right: 0.625vw; } }
 
 .fish-container {
@@ -89,12 +116,12 @@ section {
   grid-column-gap: 1em;
   width: 35vw;
   position: relative;
-  bottom: 35vh;
+  bottom: 32vh;
   right: -6.25vw;
   z-index: 100; }
   @media screen and (max-width: 1024px) {
     .link {
-      bottom: 253vh;
+      bottom: 33vh;
       width: 17.5vw;
       right: 7.14286vw; } }
 
@@ -104,7 +131,7 @@ section {
   position: relative; }
   @media screen and (max-width: 1024px) {
     .rules-container {
-      bottom: 270vh; } }
+      bottom: 80vh; } }
 
 .footer-container {
   display: grid;
@@ -113,7 +140,7 @@ section {
   position: relative; }
   @media screen and (max-width: 1024px) {
     .footer-container {
-      bottom: 200vh; } }
+      bottom: none; } }
 
 .icons {
   display: grid;
@@ -130,8 +157,9 @@ h1 {
   @media screen and (max-width: 1024px) {
     h1 {
       font-size: 2em;
-      width: 63vw;
-      bottom: 32vh; } }
+      line-height: 1.2em;
+      width: 61.53846vw;
+      left: none; } }
 
 h2 {
   font-size: 2.5em;
@@ -177,7 +205,7 @@ a {
   bottom: 5vh; }
   @media screen and (max-width: 1024px) {
     .story-text-1, .story-text-3 {
-      bottom: 80vh;
+      bottom: none;
       right: 6.25vw; } }
 
 .story-text-2, .story-text-4 {
@@ -186,26 +214,19 @@ a {
   bottom: 5vh; }
   @media screen and (max-width: 1024px) {
     .story-text-2, .story-text-4 {
-      bottom: 100vh;
-      right: -6.25vw; } }
-
-@media screen and (max-width: 1024px) {
-  .story-text-1, .story-text-2 {
-    bottom: 60vh; } }
-
-@media screen and (max-width: 1024px) {
-  .story-text-3, .story-text-4 {
-    bottom: 110vh; } }
+      bottom: none;
+      right: 6.25vw; } }
 
 .story-text-5 {
   text-align: center;
-  bottom: 40vh; }
+  bottom: 30vh; }
   @media screen and (max-width: 1024px) {
     .story-text-5 {
-      bottom: 160vh; } }
+      bottom: none; } }
 
 .rethinking {
-  color: #39BCBB; }
+  color: #39BCBB;
+  cursor: pointer; }
 
 .hashtag {
   bottom: 32vh;
@@ -213,7 +234,7 @@ a {
   font-size: 2em; }
   @media screen and (max-width: 1024px) {
     .hashtag {
-      bottom: 283vh;
+      bottom: 33vh;
       font-size: 1em; } }
 
 .so-me {
@@ -226,7 +247,8 @@ a {
 .footer-text {
   text-align: center;
   font-size: 1.5em;
-  padding: 1em; }
+  padding: 2em;
+  width: 70vw; }
   @media screen and (max-width: 1024px) {
     .footer-text {
       font-size: 1em; } }
@@ -248,7 +270,7 @@ span {
   @media screen and (max-width: 1024px) {
     .red {
       width: 70vw;
-      bottom: 220vh; } }
+      bottom: none; } }
 
 .red:hover {
   transform: scale(1.1); }
@@ -260,28 +282,36 @@ span {
   position: relative; }
   @media screen and (max-width: 1024px) {
     .blue {
-      bottom: 250vh;
+      bottom: none;
       width: 52.5vw; } }
 
 .blue:hover {
   transform: scale(1.1); }
 
 .arrow {
-  width: 30px; }
+  width: 40px; }
   @media screen and (max-width: 1024px) {
     .arrow {
-      width: 15px; } }
+      width: 20px; } }
 
 .instagram {
-  width: 30px;
-  transition: 0.2s all; }
+  width: 40px;
+  transition: 0.2s all;
+  cursor: pointer; }
+  @media screen and (max-width: 1024px) {
+    .instagram {
+      width: 40px; } }
 
 .instagram:hover {
   transform: scale(1.1); }
 
 .facebook {
-  width: 15px;
-  transition: 0.2s all; }
+  width: 40px;
+  transition: 0.2s all;
+  cursor: pointer; }
+  @media screen and (max-width: 1024px) {
+    .facebook {
+      width: 40px; } }
 
 .facebook:hover {
   transform: scale(1.1); }
@@ -291,6 +321,6 @@ span {
   position: relative; }
   @media screen and (max-width: 1024px) {
     .video {
-      bottom: 260vh;
+      bottom: 50vh;
       width: 70vw;
       height: 52.5vw; } }

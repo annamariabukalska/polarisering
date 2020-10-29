@@ -9,8 +9,8 @@ body
 	z-index: 10
 
 	+mobile
-		background: url("../#{$img-path}/bakgrunn-mobil.png") no-repeat center top
-		background-size: contain
+		background: url("../#{$img-path}/mobil-bakgrunn.png") no-repeat center top
+		background-size: cover
 
 
 // Sections
@@ -24,30 +24,55 @@ section
 
 	+mobile
 		scroll-snap-align: none
-		height: 90vh
 
-		
-.fish, .rules, .footer 
+.story-2
 	+mobile
-		background-color: $background
+		background-color: $elementcolor2 
 
- 
+.story-4
+	+mobile
+		background-color: $elementcolor1 
 
+	
 // Divs
 
-.gap
+.hand-gap, .mask-gap, .gap-small, .gap-small-2
+	height: $sectionheight
+	width: $sectionwidth
+
+.hand-gap
+	+mobile
+		height: $sectionheight / 2.5
+		background: url("../#{$img-path}/thumbs.png") no-repeat center top
+		background-attachment: fixed
+		z-index: $front
+
+.code-gap
 	height: $sectionheight * 2
 	width: $sectionwidth
 
 	+mobile
-		height: $sectionheight
+		height: $sectionheight / 2.5
+		background: url("../#{$img-path}/code-branch.png") no-repeat center top 
+		background-attachment: fixed
+		z-index: $front
 
-.gap-small, .gap-small-2
-	height: $sectionheight
-	width: $sectionwidth
+.hate-gap
+	height: 0
 
 	+mobile
-		height: $sectionheight / 3
+		height: $sectionheight / 2.5
+		background: url("../#{$img-path}/hate.png") no-repeat center top
+		background-attachment: fixed
+		z-index: $front
+
+.mask-gap
+	+mobile
+		height: $sectionheight / 2.5
+		background-color: $elementcolor1
+		background: url("../#{$img-path}/mask.png") no-repeat center top
+		background-attachment: fixed
+		z-index: $front
 
 .gap-small-2
 	background-color: $background
@@ -62,7 +87,7 @@ section
 	right: $right-move / 1.2
 
 	+mobile
-		bottom: $bottom-move * 10
+		bottom: none
 		right: $right-move / 40
 
 .fish-container
@@ -77,12 +102,12 @@ section
 	grid-column-gap: $padding
 	width: $paragraph-width
 	position: relative
-	bottom: $bottom-move * 3.5
+	bottom: $bottom-move * 3.2
 	right: - $right-move / 4
 	z-index: $front
 
 	+mobile
-		bottom: $bottom-move * 25.3
+		bottom: $bottom-move * 3.3
 		width: $paragraph-width / 2
 		right: $right-move / 3.5
 
@@ -92,7 +117,7 @@ section
 	position: relative
 
 	+mobile
-		bottom: $bottom-move * 27
+		bottom: $bottom-move * 8
 
 .footer-container
 	display: grid
@@ -101,7 +126,7 @@ section
 	position: relative
 
 	+mobile
-		bottom: $bottom-move * 20
+		bottom: none
 
 .icons
 	display: grid
@@ -120,8 +145,9 @@ h1
 
 	+mobile
 		font-size: $font-size * 2
-		width: $paragraph-width * 1.8
-		bottom: $bottom-move * 3.2
+		line-height: $line-height
+		width: $mobile-width / 1.3
+		left: none
 
 h2 
 	font-size: $font-size * 2.5
@@ -167,7 +193,7 @@ a
 	bottom: $bottom-move / 2 
 
 	+mobile
-		bottom: $bottom-move * 8
+		bottom: none
 		right: $right-move / 4
 
 .story-text-2, .story-text-4
@@ -176,23 +202,16 @@ a
 	bottom: $bottom-move / 2
 
 	+mobile
-		bottom: $bottom-move * 10
-		right: - $right-move / 4
+		bottom: none
+		right: $right-move / 4
 
-.story-text-1, .story-text-2
-	+mobile
-	 	bottom: $bottom-move * 14
 
-.story-text-3, .story-text-4
-	+mobile
-	 	bottom: $bottom-move * 20
-		
 .story-text-5
 	text-align: center
-	bottom: $bottom-move * 10
-
+	bottom: $bottom-move * 3
+	
 	+mobile
-		bottom: $bottom-move * 20
+		bottom: none
 
 .rethinking
 	color: $elementcolor1
@@ -204,9 +223,9 @@ a
 	font-size: $font-size * 2
 
 	+mobile
-		bottom: $bottom-move * 28.3
+		bottom: $bottom-move * 3.3
 		font-size: $font-size
-
+	
 .so-me
 	color: $elementcolor1
 	font-size: $font-size * 2
@@ -217,7 +236,8 @@ a
 .footer-text
 	text-align: center
 	font-size: $font-size * 1.5
-	padding: $padding
+	padding: $padding * 2
+	width: $paragraph-width * 2
 
 	+mobile
 		font-size: $font-size 
@@ -241,7 +261,7 @@ span
 
 	+mobile
 		width: $paragraph-width * 2
-		bottom: $bottom-move * 22
+		bottom: none
 
 .red:hover
 	transform: scale(1.1)
@@ -253,7 +273,7 @@ span
 	position: relative
 
 	+mobile
-		bottom: $bottom-move * 25
+		bottom: none
 		width: $paragraph-width * 1.5
 
 .blue:hover
@@ -277,7 +297,7 @@ span
 	transform: scale(1.1)
 
 .facebook
-	width: $icon-size / 2
+	width: $icon-size 
 	transition: 0.2s all
 	cursor: pointer
 
@@ -294,6 +314,6 @@ span
 	position: relative
 
 	+mobile
-		bottom: $bottom-move * 26
+		bottom: $bottom-move * 5
 		width: $paragraph-width * 2
 		height: $paragraph-width * 1.5
