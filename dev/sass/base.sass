@@ -36,7 +36,11 @@ section
 	
 // Divs
 
-.hand-gap, .mask-gap, .gap-small, .gap-small-2
+.intro-gap
+	height: $sectionheight / 2
+	width: $sectionwidth
+
+.hand-gap, .mask-gap, .gap-fish, .gap-small, .gap-small-2
 	height: $sectionheight
 	width: $sectionwidth
 
@@ -48,7 +52,7 @@ section
 		z-index: $front
 
 .code-gap
-	height: $sectionheight * 2
+	height: $sectionheight * 2.5
 	width: $sectionwidth
 
 	+mobile
@@ -74,6 +78,10 @@ section
 		background-attachment: fixed
 		z-index: $front
 
+.gap-fish
+	+mobile
+		height: 0
+
 .gap-small-2
 	background-color: $background
 
@@ -89,6 +97,7 @@ section
 	+mobile
 		bottom: none
 		right: $right-move / 40
+		width: $mobile-width
 
 .fish-container
 	height: $sectionheight / 1.5
@@ -102,8 +111,8 @@ section
 	grid-column-gap: $padding
 	width: $paragraph-width
 	position: relative
-	bottom: $bottom-move * 3.2
-	right: - $right-move / 4
+	bottom: $bottom-move * 3.6
+	right: - $right-move / 5
 	z-index: $front
 
 	+mobile
@@ -118,6 +127,7 @@ section
 
 	+mobile
 		bottom: $bottom-move * 8
+		width: $mobile-width
 
 .footer-container
 	display: grid
@@ -133,6 +143,7 @@ section
 	place-content: center
 	grid-template-columns: auto auto auto
 	gap: $padding
+	padding-bottom: $padding * 6
 
 // Text
 
@@ -144,9 +155,9 @@ h1
 	left: $right-move / 6
 
 	+mobile
-		font-size: $font-size * 2
+		font-size: $font-size * 2.5
 		line-height: $line-height
-		width: $mobile-width / 1.3
+		width: $mobile-width 
 		left: none
 
 h2 
@@ -155,15 +166,15 @@ h2
 	line-height: $line-height
 
 	+mobile
-		font-size: $font-size * 1.5
+		font-size: $font-size * 2
 
 h3 
 	font-size: $font-size * 2
 	color: $elementcolor1
 
 	+mobile
-		font-size: $font-size
-		width: $paragraph-width * 2
+		font-size: $font-size * 1.5
+		width: $mobile-width
 		line-height: $line-height
 
 p 
@@ -175,7 +186,7 @@ p
 	position: relative
 
 	+mobile
-		font-size: $font-size
+		font-size: $font-size * 1.5
 		width: $paragraph-width * 2
 
 a
@@ -208,10 +219,11 @@ a
 
 .story-text-5
 	text-align: center
-	bottom: $bottom-move * 3
+	bottom: $bottom-move * 2
+	width: $paragraph-width * 2
 	
 	+mobile
-		bottom: none
+		bottom: - $bottom-move
 
 .rethinking
 	color: $elementcolor1
@@ -231,12 +243,12 @@ a
 	font-size: $font-size * 2
 
 	+mobile
-		font-size: $font-size 
+		font-size: $font-size * 1.5
 
-.footer-text
+.footer-text, .emails
 	text-align: center
 	font-size: $font-size * 1.5
-	padding: $padding * 2
+	padding-bottom: $padding
 	width: $paragraph-width * 2
 
 	+mobile
@@ -260,7 +272,7 @@ span
 	position: relative
 
 	+mobile
-		width: $paragraph-width * 2
+		width: $paragraph-width * 2.5
 		bottom: none
 
 .red:hover
@@ -274,7 +286,7 @@ span
 
 	+mobile
 		bottom: none
-		width: $paragraph-width * 1.5
+		width: $paragraph-width * 2
 
 .blue:hover
 	transform: scale(1.1)
@@ -286,7 +298,7 @@ span
 		width: $icon-size / 2
 
 .instagram
-	width: $icon-size
+	width: $icon-size * 1.5
 	transition: 0.2s all
 	cursor: pointer
 
@@ -297,7 +309,7 @@ span
 	transform: scale(1.1)
 
 .facebook
-	width: $icon-size 
+	width: $icon-size * 1.5
 	transition: 0.2s all
 	cursor: pointer
 
@@ -315,5 +327,5 @@ span
 
 	+mobile
 		bottom: $bottom-move * 5
-		width: $paragraph-width * 2
-		height: $paragraph-width * 1.5
+		width: $sectionwidth / 1.1
+		height: $paragraph-width * 2

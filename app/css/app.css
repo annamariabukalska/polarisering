@@ -50,7 +50,11 @@ section {
   .story-4 {
     background-color: #39BCBB; } }
 
-.hand-gap, .mask-gap, .gap-small, .gap-small-2 {
+.intro-gap {
+  height: 50vh;
+  width: 100vw; }
+
+.hand-gap, .mask-gap, .gap-fish, .gap-small, .gap-small-2 {
   height: 100vh;
   width: 100vw; }
 
@@ -62,7 +66,7 @@ section {
     z-index: 100; } }
 
 .code-gap {
-  height: 200vh;
+  height: 250vh;
   width: 100vw; }
   @media screen and (max-width: 1024px) {
     .code-gap {
@@ -88,6 +92,10 @@ section {
     background-attachment: fixed;
     z-index: 100; } }
 
+@media screen and (max-width: 1024px) {
+  .gap-fish {
+    height: 0; } }
+
 .gap-small-2 {
   background-color: #17171F; }
 
@@ -102,7 +110,8 @@ section {
   @media screen and (max-width: 1024px) {
     .intro-container {
       bottom: none;
-      right: 0.625vw; } }
+      right: 0.625vw;
+      width: 80vw; } }
 
 .fish-container {
   height: 66.66667vh;
@@ -116,8 +125,8 @@ section {
   grid-column-gap: 1em;
   width: 35vw;
   position: relative;
-  bottom: 32vh;
-  right: -6.25vw;
+  bottom: 36vh;
+  right: -5vw;
   z-index: 100; }
   @media screen and (max-width: 1024px) {
     .link {
@@ -131,7 +140,8 @@ section {
   position: relative; }
   @media screen and (max-width: 1024px) {
     .rules-container {
-      bottom: 80vh; } }
+      bottom: 80vh;
+      width: 80vw; } }
 
 .footer-container {
   display: grid;
@@ -146,7 +156,8 @@ section {
   display: grid;
   place-content: center;
   grid-template-columns: auto auto auto;
-  gap: 1em; }
+  gap: 1em;
+  padding-bottom: 6em; }
 
 h1 {
   font-size: 3.5em;
@@ -156,9 +167,9 @@ h1 {
   left: 4.16667vw; }
   @media screen and (max-width: 1024px) {
     h1 {
-      font-size: 2em;
+      font-size: 2.5em;
       line-height: 1.2em;
-      width: 61.53846vw;
+      width: 80vw;
       left: none; } }
 
 h2 {
@@ -167,15 +178,15 @@ h2 {
   line-height: 1.2em; }
   @media screen and (max-width: 1024px) {
     h2 {
-      font-size: 1.5em; } }
+      font-size: 2em; } }
 
 h3 {
   font-size: 2em;
   color: #39BCBB; }
   @media screen and (max-width: 1024px) {
     h3 {
-      font-size: 1em;
-      width: 70vw;
+      font-size: 1.5em;
+      width: 80vw;
       line-height: 1.2em; } }
 
 p {
@@ -187,7 +198,7 @@ p {
   position: relative; }
   @media screen and (max-width: 1024px) {
     p {
-      font-size: 1em;
+      font-size: 1.5em;
       width: 70vw; } }
 
 a {
@@ -219,10 +230,11 @@ a {
 
 .story-text-5 {
   text-align: center;
-  bottom: 30vh; }
+  bottom: 20vh;
+  width: 70vw; }
   @media screen and (max-width: 1024px) {
     .story-text-5 {
-      bottom: none; } }
+      bottom: -10vh; } }
 
 .rethinking {
   color: #39BCBB;
@@ -242,15 +254,15 @@ a {
   font-size: 2em; }
   @media screen and (max-width: 1024px) {
     .so-me {
-      font-size: 1em; } }
+      font-size: 1.5em; } }
 
-.footer-text {
+.footer-text, .emails {
   text-align: center;
   font-size: 1.5em;
-  padding: 2em;
+  padding-bottom: 1em;
   width: 70vw; }
   @media screen and (max-width: 1024px) {
-    .footer-text {
+    .footer-text, .emails {
       font-size: 1em; } }
 
 span {
@@ -269,7 +281,7 @@ span {
   position: relative; }
   @media screen and (max-width: 1024px) {
     .red {
-      width: 70vw;
+      width: 87.5vw;
       bottom: none; } }
 
 .red:hover {
@@ -283,7 +295,7 @@ span {
   @media screen and (max-width: 1024px) {
     .blue {
       bottom: none;
-      width: 52.5vw; } }
+      width: 70vw; } }
 
 .blue:hover {
   transform: scale(1.1); }
@@ -295,7 +307,7 @@ span {
       width: 20px; } }
 
 .instagram {
-  width: 40px;
+  width: 60px;
   transition: 0.2s all;
   cursor: pointer; }
   @media screen and (max-width: 1024px) {
@@ -306,7 +318,7 @@ span {
   transform: scale(1.1); }
 
 .facebook {
-  width: 40px;
+  width: 60px;
   transition: 0.2s all;
   cursor: pointer; }
   @media screen and (max-width: 1024px) {
@@ -322,5 +334,5 @@ span {
   @media screen and (max-width: 1024px) {
     .video {
       bottom: 50vh;
-      width: 70vw;
-      height: 52.5vw; } }
+      width: 90.90909vw;
+      height: 70vw; } }
