@@ -1,5 +1,13 @@
 function openLink() {
-	window.open("http://criticalthinking.rethinkproject.eu/", '_blank');
+
+	const url = "http://criticalthinking.rethinkproject.eu/"
+	window.open(url, '_blank');
+	
+	gtag('event', 'click', {
+		'event_category': 'outbound',
+		'event_label': url,
+		'transport_type': 'beacon',
+	});
   }
   
   function openFacebook() {
