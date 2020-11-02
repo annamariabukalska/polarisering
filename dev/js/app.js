@@ -25,7 +25,7 @@ function openLink() {
 
 	gtag('event', 'click', {
 		'event_category': 'outbound',
-		'event_label': "open-facebook",
+		'event_label': "open-instagram",
 		'transport_type': 'beacon',
 	});
 
