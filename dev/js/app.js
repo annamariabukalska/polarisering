@@ -12,10 +12,23 @@ function openLink() {
   
   function openFacebook() {
 	window.open("https://facebook.com/ikketaaltforgodfisk")
+
+	gtag('event', 'click', {
+		'event_category': 'outbound',
+		'event_label': "open-facebook",
+		'transport_type': 'beacon',
+	});
   }
 
   function openInstagram() {
 	window.open("https://www.instagram.com/ikketaaltforgodfisk/")
+
+	gtag('event', 'click', {
+		'event_category': 'outbound',
+		'event_label': "open-facebook",
+		'transport_type': 'beacon',
+	});
+
   }
   
   function addAnimation() {
